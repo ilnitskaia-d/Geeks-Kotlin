@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    android:paddingBottom="40dp"
+    tools:context=".FirstFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Now Playing"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:textSize="17sp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Talk Me Down"
+        android:textSize="34dp"
+        android:layout_marginHorizontal="40sp"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="34dp"
+        />
+
+    <TextView
+        android:text="Blue Neighbourhood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginHorizontal="40dp"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:id="@+id/tv1"
+        android:layout_gravity="bottom"
+        />
+</FrameLayout>

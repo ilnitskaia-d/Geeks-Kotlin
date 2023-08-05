@@ -13,9 +13,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater);
-        setContentView(binding.root);
+        setContentView(binding.root)
+
         var n = intent.getIntExtra("num2", 0)
         binding.tv.text = (n).toString()
+
         binding.btnPlus.setOnClickListener {
             if(n == 10) {
                 val intent = Intent(this, SecondActivity::class.java);

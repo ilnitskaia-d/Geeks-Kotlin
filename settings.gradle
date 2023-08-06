@@ -16,3 +16,4 @@ rootProject.name = "Geeks-Kotlin"
 include ':app'
 include ':hw5'
 include ':classwork'
+include ':hw6'

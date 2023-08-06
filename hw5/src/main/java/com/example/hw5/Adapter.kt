@@ -36,7 +36,5 @@ class ModelAdapter(
                 onClick(adapterPosition)
             }
         }
-
-
     }
 }

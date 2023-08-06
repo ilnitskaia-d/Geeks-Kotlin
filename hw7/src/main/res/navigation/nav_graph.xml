@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gravityFallsFragment">
+
+    <fragment
+        android:id="@+id/gravityFallsFragment"
+        android:name="com.example.hw7.GravityFallsFragment"
+        android:label="fragment_gravity_falls"
+        tools:layout="@layout/fragment_gravity_falls" >
+        <action
+            android:id="@+id/action_gravityFallsFragment_to_gravityFallsDetailsFragment"
+            app:destination="@id/gravityFallsDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gravityFallsDetailsFragment"
+        android:name="com.example.hw7.GravityFallsDetailsFragment"
+        android:label="fragment_gravity_falls_details"
+        tools:layout="@layout/fragment_gravity_falls_details" >
+        <argument
+            android:name="gravityFallsModel"
+            app:argType="com.example.hw7.GravityFallsModel"
+            />
+    </fragment>
+</navigation>

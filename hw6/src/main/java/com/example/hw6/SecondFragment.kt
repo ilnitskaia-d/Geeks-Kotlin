@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.example.hw6.databinding.FragmentSecondBinding
 
 class SecondFragment : Fragment() {
@@ -20,31 +21,12 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var i = arguments?.getInt("pos")
+        var card = arguments?.getSerializable("card") as CardModel
         binding.apply {
-
-            when(i)
-            {
-                0 -> {
-                    imgView.setImageResource(R.drawable.img_rick)
-                    statTv.text = "Alive"
-                    nameTv.text = "Rick Sanchez"
-                }
-                1 -> {
-                    imgView.setImageResource(R.drawable.img_morty)
-                    statTv.text = "Alive"
-                    nameTv.text = "Morty Smith"
-                }
-                2 -> {
-                    imgView.setImageResource(R.drawable.img_albert)
-                    statTv.text = "Dead"
-                    nameTv.text = "Albert Einstein"
-                }
-                3 -> {
-                    imgView.setImageResource(R.drawable.img_jeremy)
-                    statTv.text = "Alive"
-                    nameTv.text = "Jerry Smith"
-                }
+            card.apply {
+                Glide.with(imgView).load(image).into(imgView)
+                statTv.text = status
+                nameTv.text = name
             }
         }
     }

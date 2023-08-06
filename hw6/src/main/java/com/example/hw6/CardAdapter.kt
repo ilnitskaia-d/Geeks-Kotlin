@@ -4,11 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.bumptech.glide.Glide
 import com.example.hw6.databinding.ItemCardBinding
 
 class CardAdapter(
     val list: ArrayList<CardModel>,
-    val onClick: (position: Int) -> Unit
+    val onClick: (card: CardModel) -> Unit
 ): Adapter<CardAdapter.CardViewHolder>() {
     inner class CardViewHolder(private val binding: ItemCardBinding) :ViewHolder(
         binding.root
@@ -22,16 +23,9 @@ class CardAdapter(
                     nameTv.text = name
 
                     itemView.setOnClickListener{
-                        onClick(adapterPosition)
+                        onClick(list[adapterPosition])
                     }
-
-                    when(adapterPosition)
-                    {
-                        0 -> imgView.setImageResource(R.drawable.img_rick)
-                        1 -> imgView.setImageResource(R.drawable.img_morty)
-                        2 -> imgView.setImageResource(R.drawable.img_albert)
-                        3 -> imgView.setImageResource(R.drawable.img_jeremy)
-                    }
+                    Glide.with(imgView).load(image).into(imgView)
                 }
             }
         }

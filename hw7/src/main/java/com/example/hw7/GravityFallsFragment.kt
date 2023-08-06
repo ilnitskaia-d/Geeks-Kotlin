@@ -29,9 +29,7 @@ class GravityFallsFragment : Fragment() {
 
     private fun initListener() {
         binding.cardViewGravityFalls.setOnClickListener{
-
             findNavController().navigate(GravityFallsFragmentDirections.actionGravityFallsFragmentToGravityFallsDetailsFragment(gravityFallsModel))
-
         }
     }
 }
